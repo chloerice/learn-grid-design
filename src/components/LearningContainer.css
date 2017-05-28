@@ -1,0 +1,16 @@
+.LearningContainer {
+  text-align: center;
+  background: #080357;
+  height: 100vh;
+  font-size: 16px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0 15px;
+  color: #FFC15E;
+}
+
+.LearningContainer-header {
+  text-transform: capitalize;
+}
