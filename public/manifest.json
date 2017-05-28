@@ -1,0 +1,14 @@
+{
+  "short_name": "Learn Grid Design",
+  "name": "Learn Responsive Grid System Design",
+  "icons": [
+     {
+      "src": "favicon.ico",
+      "sizes": "16x16 32x32 48x48 72x72 96x96 128x128 256x256",
+     }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#000000"
+}
