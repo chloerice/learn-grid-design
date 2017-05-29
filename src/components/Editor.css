@@ -1,0 +1,155 @@
+.Editor {
+  display: flex;
+  align-items: flex-end;
+  flex-flow: row wrap;
+  height: auto;
+  width: auto;
+  min-height: 380px;
+  min-width: 450px;
+  margin: 10px 0;
+  background: rgba(255, 255, 255, .05);
+  border-radius: 7px;
+}
+
+.line-numbers {
+  background: rgba(255, 255, 255, .15);
+  border-radius: 7px 0 0 7px;
+  width: 30px;
+  height: inherit;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+}
+
+.line-numbers li {
+  margin: 8px;
+}
+
+/* block level flex item fix */
+.codeWrapper {
+  display: flex;
+  align-self: flex-start;
+  flex-flow: column nowrap;
+  padding-top: 1px;
+}
+
+.code {
+  font-size: 18px;
+  font-family: Monospace;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.before {
+  margin: 0;
+}
+
+.middle {
+  margin: 0 0 0 18px;
+}
+
+.after {
+  margin: 0;
+  line-height: 0;
+}
+
+.entry {
+  align-self: flex-start;
+  border: none;
+  outline: none;
+  resize: none;
+  font-size: 18px;
+  font-family: Monospace;
+  font-weight: 500;
+  line-height: 1.4em;
+  height: 112px;
+  width: 365px;
+  overflow-y: auto;
+  padding: 0;
+  margin: 1px 0 0 18px;
+}
+
+.next-button {
+  color: #080357;
+  background: #FFC15E;
+  height: 50px;
+  width: auto;
+  border: none;
+  border-radius: 3px;
+  font-size: medium;
+  padding: 10px;
+  margin: 15px;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.next-button:hover {
+  background: #FF9F1C;
+}
+
+footer {
+  padding: 25px;
+}
+
+/* mobile layout: iPhone >= 4 */
+@media only screen
+and (max-width: 500px) {
+
+  .Editor {
+    min-width: 0;
+    width: 100vw;
+    border-radius: 0;
+    font-size: .75em;
+  }
+
+  .line-numbers {
+    border-radius: 0;
+  }
+
+  .codeWrapper {
+    padding-top: 5px;
+  }
+
+  .code {
+    padding: 2px;
+    font-size: 1em;
+  }
+
+  .entry {
+    width: 82vw;
+    height: 107px;
+    font-size: 1em;
+    line-height: 1.8em;
+  }
+
+  .after {
+    line-height: 1.5;
+  }
+
+  .next-button {
+    width: 100vw;
+    border-radius: 0;
+    margin: 0;
+    position: static;
+  }
+}
+
+/* iPhone > 5 fix */
+@media only screen
+and (min-width: 321px)
+and (max-width: 499px) {
+
+  .Editor {
+    font-size: 1em;
+  }
+
+  .code {
+    padding: 1px;
+  }
+
+  .entry {
+    line-height: 1.6;
+    height: 102px;
+  }
+}
