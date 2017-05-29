@@ -23,7 +23,7 @@
 }
 
 .line-numbers li {
-  padding: 4px;
+  margin: 8px;
 }
 
 /* block level flex item fix */
@@ -31,6 +31,7 @@
   display: flex;
   align-self: flex-start;
   flex-flow: column nowrap;
+  padding-top: 1px;
 }
 
 .code {
@@ -62,9 +63,9 @@
   font-family: Monospace;
   font-weight: 500;
   line-height: 1.4em;
-  height: 108px;
+  height: 112px;
   width: 365px;
-  overflow-y: hidden;
+  overflow-y: auto;
   padding: 0;
   margin: 1px 0 0 18px;
 }
@@ -106,6 +107,10 @@ and (max-width: 500px) {
     border-radius: 0;
   }
 
+  .codeWrapper {
+    padding-top: 5px;
+  }
+
   .code {
     padding: 2px;
     font-size: 1em;
@@ -113,6 +118,7 @@ and (max-width: 500px) {
 
   .entry {
     width: 82vw;
+    height: 107px;
     font-size: 1em;
     line-height: 1.8em;
   }
@@ -131,7 +137,8 @@ and (max-width: 500px) {
 
 /* iPhone > 5 fix */
 @media only screen
-and (min-width: 321px) {
+and (min-width: 321px)
+and (max-width: 499px) {
 
   .Editor {
     font-size: 1em;

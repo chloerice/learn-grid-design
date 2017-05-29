@@ -17,7 +17,7 @@ export default class Editor extends Component {
 
   render() {
     const { code } = this.props.editor
-    // JS hack for making an array from a range of numbers via index
+    // JS hack for making an array from a range via index, [1...15] in this case
     const lineNumbers = Array(15).fill().map((_, idx) => idx + 1)
 
     return (

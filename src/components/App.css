@@ -8,7 +8,7 @@
   align-items: stretch;
   padding: 0 15px;
   color: #FFC15E;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .App-header {
@@ -58,6 +58,7 @@ and (max-width: 500px) {
 
   .App {
     padding: 0;
+    overflow: auto;
   }
 
 }
