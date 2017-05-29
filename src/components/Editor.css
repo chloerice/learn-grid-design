@@ -1,11 +1,11 @@
 .Editor {
   display: flex;
-  flex-flow: column wrap;
-  justify-content: space-between;
   align-items: flex-end;
-  align-self: flex-end;
-  height: 400px;
-  width: 450px;
+  flex-flow: row wrap;
+  height: auto;
+  width: auto;
+  min-height: 380px;
+  min-width: 450px;
   margin: 10px 0;
   background: rgba(255, 255, 255, .05);
   border-radius: 7px;
@@ -14,18 +14,23 @@
 .line-numbers {
   background: rgba(255, 255, 255, .15);
   border-radius: 7px 0 0 7px;
-  height: 100%;
-  align-self: flex-start;
-}
-
-.line-numbers ul {
+  width: 30px;
+  height: inherit;
   list-style: none;
   padding: 0;
-  margin: 5px 0 0 0;
+  margin: 0;
+  text-align: right;
 }
 
 .line-numbers li {
-  margin: 8px;
+  padding: 4px;
+}
+
+/* block level flex item fix */
+.codeWrapper {
+  display: flex;
+  align-self: flex-start;
+  flex-flow: column nowrap;
 }
 
 .code {
@@ -33,8 +38,6 @@
   font-family: Monospace;
   line-height: 1.5;
   text-align: left;
-  align-self: flex-start;
-  margin: 0;
 }
 
 .before {
@@ -82,4 +85,64 @@
 
 .next-button:hover {
   background: #FF9F1C;
+}
+
+footer {
+  padding: 25px;
+}
+
+/* mobile layout: iPhone >= 4 */
+@media only screen
+and (max-width: 500px) {
+
+  .Editor {
+    min-width: 0;
+    width: 100vw;
+    border-radius: 0;
+    font-size: .75em;
+  }
+
+  .line-numbers {
+    border-radius: 0;
+  }
+
+  .code {
+    padding: 2px;
+    font-size: 1em;
+  }
+
+  .entry {
+    width: 82vw;
+    font-size: 1em;
+    line-height: 1.8em;
+  }
+
+  .after {
+    line-height: 1.5;
+  }
+
+  .next-button {
+    width: 100vw;
+    border-radius: 0;
+    margin: 0;
+    position: static;
+  }
+}
+
+/* iPhone > 5 fix */
+@media only screen
+and (min-width: 321px) {
+
+  .Editor {
+    font-size: 1em;
+  }
+
+  .code {
+    padding: 1px;
+  }
+
+  .entry {
+    line-height: 1.6;
+    height: 102px;
+  }
 }

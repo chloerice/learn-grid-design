@@ -1,10 +1,10 @@
 .LearningContainer {
-  text-align: center;
+  text-align: left;
   background: #080357;
   height: 100vh;
   font-size: 16px;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column nowrap;
   justify-content: flex-start;
   align-items: flex-start;
   padding: 0 15px;
@@ -13,4 +13,18 @@
 
 .LearningContainer-header {
   text-transform: capitalize;
+}
+
+/* mobile layout */
+@media only screen
+and (max-width: 500px) {
+
+  .LearningContainer {
+    padding: 0;
+    text-align: center;
+  }
+
+  .LearningContainer-header {
+    margin: 15px auto 5px;
+  }
 }

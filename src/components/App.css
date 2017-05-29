@@ -7,8 +7,8 @@
   justify-content: flex-start;
   align-items: stretch;
   padding: 0 15px;
-  overflow: hidden;
   color: #FFC15E;
+  overflow: auto;
 }
 
 .App-header {
@@ -51,4 +51,13 @@
 .fade-leav.fade-exit-active {
   opacity: 0.01;
   transition: opacity 300ms ease-out;
+}
+
+@media only screen
+and (max-width: 500px) {
+
+  .App {
+    padding: 0;
+  }
+
 }

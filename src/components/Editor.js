@@ -22,22 +22,20 @@ export default class Editor extends Component {
 
     return (
       <div className='Editor'>
-        <div className='line-numbers'>
-          <ul>
-            {lineNumbers.map((num, idx) => <li key={idx}>{num}</li>)}
-          </ul>
-        </div>
-        <div className='code'>
-          <p className='before'>{code.before}</p>
+        <ul className='line-numbers'>
+          {lineNumbers.map((num, idx) => <li key={idx}>{num}</li>)}
+        </ul>
+        <div className='codeWrapper'>
+          <p className='code before'>{code.before}</p>
           {code.middle && code.middle.map((line, i) => (
-            <p className='middle' key={i}>{line}</p>
+            <p className='code middle' key={i}>{line}</p>
           ))}
           <textarea
             value={this.state.value}
             onChange={this.handleChange}
             className='entry'
           />
-          <p className='after'>{code.after}</p>
+        <p className='code after'>{code.after}</p>
         </div>
         <NavLink to={this.props.next}>
           <button className='next-button'>Next</button>
